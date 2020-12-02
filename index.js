@@ -109,7 +109,7 @@ app.post("/password/forgot", async (req, res) => {
                 subject: `Reset password`, // Subject line
                 html: `<b>Click the below link to reset your password. It is one-time link, once you 
                         changed your password using the link, it will br expired.</b><br>
-                        <p>http://localhost:8000/reset-password.html?reset_string=${str},user=${req.body.email}</p>`,
+                        <p>https://auth-user-js.netlify.app/reset-password.html?reset_string=${str},user=${req.body.email}</p>`,
             });
 
             await db.collection("users").updateOne({
